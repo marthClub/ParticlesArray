@@ -87,21 +87,25 @@ function Particle( xIn , yIn , wIn , hIn ) {
     // if particle has gone off left edge
     if( this.p.x < this.x ) {
       // update the particle's velocity
+      // force x component of velocity to be positive (moving right)
       this.v.x = abs( this.v.x );
     }
     // if particle has gone off right edge
     if( this.p.x > this.x + this.w ) {
       // update the particle's velocity
+      // force x component of velocity to be negative (moving left)
       this.v.x = -abs( this.v.x );
     }
     // if particle has gone off upper edge
     if( this.p.y < this.y ) {
       // update the particle's velocity
+      // force y component of velocity to be positive (moving up)
       this.v.y = abs( this.v.y );
     }
     // if particle has gone off lower edge
     if( this.p.y > this.y + this.h ) {
       // update the particle's velocity
+      // force y component of velocity to be negative (moving down)
       this.v.y = -abs( this.v.y );
     }
   } // end of Particle method: evolve() /////////////////////////////////////////////////////////
