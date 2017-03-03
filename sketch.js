@@ -16,7 +16,6 @@ function setup() {
   P = [];
   var w = windowWidth / N;
   var h = windowWidth / N;
-  var ang = 0;
   for( var n = 0 ; n < N ; n++ ) {
     P[n] = new Particle( n*w , 0.5*(windowHeight-h)  , w , h );
   }
